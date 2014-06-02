@@ -2,6 +2,11 @@ Moodle Block: Helpmenow
 Copyright: VLACS 2013 www.vlacs.org
 License: http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 
+Plugin branch names and matching Moodle version
+MOODLE_19_STABLE => Moodle 1.9
+master => Moodle 2.2 to 2.7
+alternate_server (it is the old master branch containing alternate server code) => Moodle 1.9
+
 Intro:
 This moodle block creates a chat interface for students and teachers to
 connect.  It also provides a help desk chat interface for students to ask
@@ -62,11 +67,10 @@ Features:
 
 - Plugins to enable sharing tools
   - Adobe Connect
-  - WizIQ
-  - GoToMeeting (base code provided, has not been used in a while)
+  - WizIQ (obsolete / not maintained)
+  - GoToMeeting (obsolete / not maintained)
 
   - Links are provided in chat to invite students to join the teacher in the
     shared area.
-
 
 
