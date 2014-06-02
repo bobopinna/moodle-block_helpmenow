@@ -1,3 +1,6 @@
+Note: this is the old 'master' branch. It contains code to support the alternate server feature. It is working on Moodle 1.9.
+This branch is not maintain anymore. It is kept if ever we want to add the feature to the master branch later.
+
 Moodle Block: Helpmenow 
 Copyright: VLACS 2013 www.vlacs.org
 License: http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
