@@ -463,7 +463,7 @@ function helpmenow_print_hallway($users) {
 }
 
 function helpmenow_block_interface() {
-    global $CFG, $USER, $OUTPUT, $DB;
+    global $CFG, $USER, $OUTPUT, $DB, $PAGE;
 
     helpmenow_ensure_user_exists();
 
@@ -525,9 +525,9 @@ EOF;
         $titlename = get_string('helpmenow', 'block_helpmenow');
     }
 
+    $PAGE->requires->jquery();
     $output .= <<<EOF
 <hr />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 $jplayer
 <script src="$CFG->wwwroot/blocks/helpmenow/javascript/lib/jquery.titlealert.js" type="text/javascript"></script>
 <script src="$CFG->wwwroot/blocks/helpmenow/javascript/lib/json2.js" type="text/javascript"></script>
