@@ -463,7 +463,7 @@ function helpmenow_print_hallway($users) {
 }
 
 function helpmenow_block_interface() {
-    global $CFG, $USER, $OUTPUT, $DB, $PAGE;
+    global $CFG, $USER, $OUTPUT, $DB;
 
     helpmenow_ensure_user_exists();
 
@@ -525,7 +525,6 @@ EOF;
         $titlename = get_string('helpmenow', 'block_helpmenow');
     }
 
-    $PAGE->requires->jquery();
     $output .= <<<EOF
 <hr />
 $jplayer

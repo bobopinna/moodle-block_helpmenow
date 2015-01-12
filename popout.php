@@ -34,6 +34,7 @@ $PAGE->set_pagelayout('standard');
 
 // Add style.css.
 $PAGE->requires->css('/blocks/helpmenow/style.css');
+$PAGE->requires->jquery();
 
 if (!empty($CFG->helpmenow_title)) {
     $title = $CFG->helpmenow_title;

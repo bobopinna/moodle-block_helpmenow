@@ -30,7 +30,10 @@ require_once(dirname(__FILE__) . '/lib.php');
 
 class block_helpmenow extends block_base {
     function init() {
-        global $CFG;
+        global $CFG, $PAGE;
+        
+        $PAGE->requires->jquery();
+
         if (!empty($CFG->helpmenow_title)) {
             $this->title = $CFG->helpmenow_title;
         } else {
@@ -45,7 +48,7 @@ class block_helpmenow extends block_base {
 
     function get_content() {
         global $OUTPUT;
-
+	
         if ($this->content !== NULL) {
             return $this->content;
         }
