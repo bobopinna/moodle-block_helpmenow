@@ -1362,6 +1362,11 @@ EOF;
                 $name = create_popup(fullname($u), $connect->out(), $u->id);
                 $motd = $u->motd;
             } else {
+                // If the user is offline we skip it.
+                continue;
+
+                // Note: the two following line allow to display offline user (not wanted anymore)
+                // I just keep them in case we miss something in the code that do want to display offline user...
                 $name = fullname($u);
                 $motd = get_string('offline', 'block_helpmenow');
             }
