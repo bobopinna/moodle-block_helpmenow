@@ -206,4 +206,3 @@ EOF;
 $string['default_emailsubject'] = 'Missed !blockname! messages from !fromusername!';
 $string['max_length'] = 'Max length';
 
-?>

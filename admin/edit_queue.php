@@ -93,4 +93,3 @@ echo $OUTPUT->box_end();
 # footer
 echo $OUTPUT->footer();
 
-?>

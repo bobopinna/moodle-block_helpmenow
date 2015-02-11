@@ -90,4 +90,3 @@ if ($sessionid) {   # helpers connecting to queue sessions
 $chat_url->param('session', $session->id);
 redirect($chat_url->out());
 
-?>

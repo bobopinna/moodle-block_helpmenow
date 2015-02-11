@@ -114,4 +114,3 @@ echo $OUTPUT->header();
 echo $OUTPUT->box($output);
 echo $OUTPUT->footer();
 
-?>

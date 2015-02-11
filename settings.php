@@ -64,4 +64,3 @@ $settings->add(new admin_setting_configselect('helpmenow_contact_list',
     $options
 ));
 
-?>

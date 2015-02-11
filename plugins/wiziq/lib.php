@@ -443,4 +443,3 @@ class helpmenow_session2plugin_wiziq extends helpmenow_session2plugin {
     public $plugin = 'wiziq';
 }
 
-?>

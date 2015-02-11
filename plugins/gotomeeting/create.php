@@ -57,4 +57,3 @@ $user2plugin->update();
 
 redirect($user2plugin->join_url);
 
-?>

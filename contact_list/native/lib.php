@@ -175,4 +175,3 @@ class helpmenow_contact_list_native extends helpmenow_contact_list {
     }
 }
 
-?>

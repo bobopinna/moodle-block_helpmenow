@@ -11,4 +11,3 @@
 # settings
 $string['native_name'] = 'Native';
 
-?>

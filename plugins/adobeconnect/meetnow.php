@@ -68,4 +68,3 @@ EOF;
 
 echo $OUTPUT->footer();
 
-?>

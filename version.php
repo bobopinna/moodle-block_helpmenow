@@ -32,4 +32,3 @@ $plugin->component = 'block_helpmenow';
 $plugin->maturity = MATURITY_BETA;
 $plugin->release = '2.2 (Plugin Build: 2014050400)';
 
-?>

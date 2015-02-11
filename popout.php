@@ -57,4 +57,3 @@ EOF;
 
 echo $output;
 
-?>

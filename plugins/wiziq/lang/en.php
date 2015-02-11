@@ -34,4 +34,3 @@ $string['wiziq_settings_access_key_desc'] = 'WizIQ Access Key';
 $string['wiziq_settings_secret_key'] = 'WizIQ Secret Key';
 $string['wiziq_settings_secret_key_desc'] = 'WizIQ Secret Key';
 
-?>

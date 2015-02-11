@@ -49,4 +49,3 @@ $string['gotomeeting_token_desc'] = "
     <li>Click &quot;Allow&quot;.</li></ol>";
 $string['gotomeeting_token_link'] = "Allow Access";
 
-?>

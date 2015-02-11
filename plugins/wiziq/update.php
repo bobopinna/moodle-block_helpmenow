@@ -44,4 +44,3 @@ if ($class_status == 'expired' or $class_status == 'completed') {
     $user2plugin->delete_meeting();
 }
 
-?>

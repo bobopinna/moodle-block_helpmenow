@@ -243,4 +243,4 @@ function xmldb_block_helpmenow_upgrade($oldversion = 0) {
 
     return $result;
 }
-?>
+

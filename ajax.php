@@ -112,4 +112,3 @@ header('Expires: '. gmdate('D, d M Y H:i:s', 0) .' GMT');
 header('Pragma: no-cache');
 echo json_encode($responses);
 
-?>

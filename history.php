@@ -108,4 +108,3 @@ echo <<<EOF
 </html>
 EOF;
 
-?>

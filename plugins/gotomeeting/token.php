@@ -120,4 +120,3 @@ echo "<p><a href='$citrix_url'>" . get_string('gotomeeting_token_link', 'block_h
 
 echo $OUTPUT->footer();
 
-?>

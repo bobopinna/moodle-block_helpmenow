@@ -54,4 +54,3 @@ $settings->add(new admin_setting_configtext('helpmenow_adobeconnect_logourl',
                                             100));
 
 
-?>

@@ -31,4 +31,4 @@ $settings->add(new admin_setting_configtext('helpmenow_gotomeeting_key',
                                             '',
                                             PARAM_TEXT,
                                             50));
-?>
+

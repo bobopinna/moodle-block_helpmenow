@@ -154,4 +154,3 @@ class helpmenow_plugin_adobeconnect extends helpmenow_plugin {
 }
 
 
-?>

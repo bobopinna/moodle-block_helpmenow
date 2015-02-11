@@ -70,4 +70,3 @@ if ((string) $response['status'] == 'fail') {
 
 redirect((string) $response->add_attendees->attendee_list->attendee[0]->attendee_url);
 
-?>
