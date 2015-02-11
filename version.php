@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') or die("Direct access to this location is not allowed.");
 
-$plugin->version = 2014050401;
+$plugin->version = 2015021000;
 $plugin->requires = 2011120511; // require Moodle 2.2.11+
 $plugin->cron = 60;
 $plugin->component = 'block_helpmenow';

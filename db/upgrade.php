@@ -241,6 +241,34 @@ function xmldb_block_helpmenow_upgrade($oldversion = 0) {
         upgrade_block_savepoint(true, 2014050401, 'helpmenow');
     }
 
+    if ($oldversion < 2015021000) {
+
+        // Define table block_helpmenow_log to be created.
+        $table = new xmldb_table('block_helpmenow_log');
+
+        // Adding fields to table block_helpmenow_log.
+        $table->add_field('id', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, XMLDB_SEQUENCE, null);
+        $table->add_field('userid', XMLDB_TYPE_INTEGER, '20', null, null, null, null);
+        $table->add_field('action', XMLDB_TYPE_CHAR, '255', null, null, null, null);
+        $table->add_field('details', XMLDB_TYPE_CHAR, '255', null, null, null, null);
+        $table->add_field('timecreated', XMLDB_TYPE_INTEGER, '20', null, null, null, null);
+
+        // Adding keys to table block_helpmenow_log.
+        $table->add_key('primary', XMLDB_KEY_PRIMARY, array('id'));
+
+        // Adding indexes to table block_helpmenow_log.
+        $table->add_index('block_helpmenow_log_u_ix', XMLDB_INDEX_NOTUNIQUE, array('userid'));
+        $table->add_index('block_helpmenow_log_ua_ix', XMLDB_INDEX_NOTUNIQUE, array('userid', 'action'));
+
+        // Conditionally launch create table for block_helpmenow_log.
+        if (!$dbman->table_exists($table)) {
+            $dbman->create_table($table);
+        }
+
+        // Helpmenow savepoint reached.
+        upgrade_block_savepoint(true, 2015021000, 'helpmenow');
+    }
+
     return $result;
 }
 
