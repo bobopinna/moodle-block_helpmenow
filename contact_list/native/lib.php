@@ -50,7 +50,7 @@ class helpmenow_contact_list_native extends helpmenow_contact_list {
                 $courseids = implode(",", $courseids);
 
                 $sql = "
-                    SELECT usr.*
+                    SELECT DISTINCT usr.id, usr.*
                     FROM {course} c
                     INNER JOIN {context} cx ON c.id = cx.instanceid AND cx.contextlevel = '50'
                     INNER JOIN {role_assignments} ra ON cx.id = ra.contextid
@@ -81,7 +81,7 @@ class helpmenow_contact_list_native extends helpmenow_contact_list {
                 $courseids = implode(",", $courseids);
 
                 $sql = "
-                    SELECT usr.*
+                    SELECT DISTINCT usr.id, usr.*
                     FROM {course} c
                     INNER JOIN {context} cx ON c.id = cx.instanceid AND cx.contextlevel = '50'
                     INNER JOIN {role_assignments} ra ON cx.id = ra.contextid
