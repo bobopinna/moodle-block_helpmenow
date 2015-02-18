@@ -27,6 +27,8 @@
 $string['pluginname'] = 'Help Me Now Block';
 $string['blockname'] = 'Help Me Now';
 $string['helpmenow'] = 'Help Me Now';
+$string['helpmenow:addinstance'] = 'Add helpmenow block'; 
+$string['helpmenow:myaddinstance'] = 'Add helpmenow block to My';
 
 # plugin strings
 $plugins = get_list_of_plugins('plugins', '', dirname(dirname(dirname(__FILE__))));
