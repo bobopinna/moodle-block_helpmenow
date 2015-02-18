@@ -62,7 +62,7 @@ echo $OUTPUT->box_start('generalbox centerpara');
 
 $where = $admin ? '' : "WHERE h.userid = {$USER->id}";
 $sql = "
-    SELECT q.*
+    SELECT DISTINCT q.id, q.*
     FROM {block_helpmenow_queue} q
     JOIN {block_helpmenow_helper} h ON h.queueid = q.id
     $where
