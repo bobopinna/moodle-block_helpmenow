@@ -95,8 +95,11 @@ if (count($sessionids) < 1) {
         $orderby = "s2u.last_refresh DESC";
     }
 
+    // In the following SQL we concatenate the sessionid + userid because in some session a user can talk with multiple users.
+    // However Moodle 2 needs a unique id when using get_records_sql, so we create a unique id with these fields. This unique id field
+    // is not using for any other reason than avoiding the uniqure id field warnings. A lot of explanation just for that, isn't it?
     $sql = "
-        SELECT s2u.sessionid, u.*
+        SELECT concat(s2u.userid, s2u.sessionid), s2u.sessionid, u.*
         FROM {block_helpmenow_session2user} s2u
         JOIN {user} u ON u.id = s2u.userid
         WHERE s2u.userid <> $userid
@@ -104,7 +107,6 @@ if (count($sessionids) < 1) {
         ORDER BY $orderby
         ";
     $other_user_recs = $DB->get_records_sql($sql);
-
     $heading = get_string('viewconversation', 'block_helpmenow');
     if ($userid != $USER->id) {
         $mainuser = $DB->get_record('user', array('id' => $userid));
