@@ -46,12 +46,12 @@ $PAGE->set_pagelayout('standard');
 
 // Add style.css.
 $PAGE->requires->css('/blocks/helpmenow/style.css');
-
 # form stuff
 $form = new helpmenow_queue_form();
 if ($form->is_cancelled()) {                # cancelled
     redirect($admin_url);
 } else if ($formdata = $form->get_data()) {     # submitted
+    $formdata->description = $formdata->description['text'];
     if (!$formdata->queueid) {
         $DB->insert_record('block_helpmenow_queue', $formdata);
     } else {
@@ -81,7 +81,8 @@ $toform = array(
 if ($queueid) {
     $queue = new helpmenow_queue($queueid);
     $toform['name'] = $queue->name;
-    $toform['description'] = $queue->description;
+    $toform['description']['text'] = $queue->description;
+    $toform['description']['format'] = FORMAT_HTML;
     $toform['weight'] = $queue->weight;
 }
 
