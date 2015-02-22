@@ -374,6 +374,14 @@ function helpmenow_autologout_users() {
  */
 function helpmenow_print_hallway($users) {
     global $CFG, $OUTPUT;
+
+    // Display a number maximum of users.
+    if(count($users) > 100) {
+        echo "We are going to display only the most recent 100 users - if you need to access more please contact the helpdesk.";
+        $users = array_chunk($users, 100);
+        $users = $users[0];
+    }
+
     static $admin;
     if (!isset($admin)) {
         $admin = has_capability(HELPMENOW_CAP_MANAGE, context_system::instance());
