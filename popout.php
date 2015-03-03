@@ -30,7 +30,7 @@ require_login(0, false);
 
 $PAGE->set_context(context_system::instance());
 $PAGE->set_url('/blocks/helpmenow/login.php');
-$PAGE->set_pagelayout('standard');
+$PAGE->set_pagelayout('popup');
 
 // Add style.css.
 $PAGE->requires->css('/blocks/helpmenow/style.css');
